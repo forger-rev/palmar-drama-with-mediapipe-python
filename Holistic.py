@@ -824,7 +824,7 @@ def establish_capture_landmarks(cb_key):
             if val == num_coords:
                 quit_key = 1
 
-        with open('coords_003.csv', mode='w', newline='') as f:
+        with open('coords_004.csv', mode='w', newline='') as f:
             csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             csv_writer.writerow(landmarks)
         
@@ -890,7 +890,7 @@ def capture_landmarks(lh_l, fa_l, po_l):
     row = l_hand_row_d + pose_row_d + face_row_d
     
     # Append class name
-    class_name = "ME"
+    class_name = "YOU"
     row.insert(0, class_name)
                 
     # Export to CSV
@@ -898,7 +898,7 @@ def capture_landmarks(lh_l, fa_l, po_l):
     # de_sec = seconds*10
     # count = (de_sec//1)%5
     # if count == 0:
-    with open('coords_003.csv', mode='a', newline='') as f:
+    with open('coords_004.csv', mode='a', newline='') as f:
         csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csv_writer.writerow(row)
         print("record!!")
